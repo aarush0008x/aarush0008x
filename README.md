@@ -1,13 +1,11 @@
 <div align="center">
 
-  <!-- Header Banner / Dynamic Wave SVG -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=802938&height=220&section=header&text=Aarush%20Singh&fontSize=56&fontColor=F7F6F4&fontAlignY=40&desc=B.Tech%20AI%20%26%20Data%20Science%20%7C%20Full-Stack%20%26%20Edge%20Systems%20Builder&descFontSize=20&descAlignY=62&descAlign=50" width="100%" alt="Aarush Singh Header" />
+  <!-- Self-Hosted Native Header Banner (100% Uptime & Resolution) -->
+  <img src="https://raw.githubusercontent.com/aarush0008x/aarush0008x/main/assets/header-banner.svg" width="100%" alt="Aarush Singh — Developer Portfolio Banner" />
 
-  <!-- Animated Typing Intro -->
-  <a href="https://linkedin.com/in/aarush-singh-4b3a20358/">
-    <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&size=22&duration=3000&pause=1000&color=F7F6F4&center=true&vCenter=true&multiline=false&width=650&height=50&lines=AI+%26+Data+Science+Student+%40+CGC+University;Lead+Developer+at+nimoCode+Platform;Building+Edge+Systems+%26+Fast+Web+Architectures;24-Hour+Hackathon+Sprint+Competitor" alt="Typing SVG" />
-  </a>
+  <br /><br />
 
+  <!-- Action Badges -->
   <p align="center">
     <a href="https://linkedin.com/in/aarush-singh-4b3a20358/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     &nbsp;
@@ -133,27 +131,12 @@ aarush@cgc-lab:~$ neofetch --aarush
 
 ---
 
-## 📊 Live GitHub Activity & Streak
+## 📊 Live Engineering Activity & Verified Impact
 
 <div align="center">
 
-  <!-- Verified High-Uptime Streak Counter -->
-  <a href="https://github.com/aarush0008x">
-    <img src="https://streak-stats.demolab.com?user=aarush0008x&theme=tokyonight&background=242424&ring=802938&fire=802938&currStreakLabel=802938&sideLabels=F7F6F4&dates=9E9A93&hide_border=true" alt="GitHub Streak" width="480" />
-  </a>
-
-  <br /><br />
-
-  <!-- Metric Badges in Slate & Burgundy -->
-  <p align="center">
-    <img src="https://img.shields.io/badge/Focus-AI_%26_Full--Stack_Systems-802938?style=for-the-badge" alt="Focus" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/University-CGC_Mohali-242424?style=for-the-badge" alt="University" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/Active_Repos-8%2B-802938?style=for-the-badge" alt="Repos" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/Hackathons-24hr_Sprints-242424?style=for-the-badge" alt="Hackathons" />
-  </p>
+  <!-- Self-Hosted Native Stats Card -->
+  <img src="https://raw.githubusercontent.com/aarush0008x/aarush0008x/main/assets/github-stats.svg" width="100%" alt="Aarush Singh GitHub Stats" />
 
 </div>
 
@@ -176,10 +159,5 @@ aarush@cgc-lab:~$ neofetch --aarush
   <a href="https://nimocode.vercel.app/">
     <img src="https://img.shields.io/badge/Explore-Live_Portfolio-242424?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" />
   </a>
-
-  <br /><br />
-
-  <!-- Bottom Wave Divider -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=802938&height=100&section=footer" width="100%" alt="Footer Wave" />
 
 </div>
