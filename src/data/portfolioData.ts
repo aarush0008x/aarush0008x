@@ -131,24 +131,27 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "rockinroll",
     title: "RockinRoll",
-    category: "Full-Stack Web & Media",
-    tagline: "Interactive modern music & entertainment web experience",
-    description: "A dynamic full-stack media and entertainment web platform with seamless playback controls, interactive audio visuals, and performant client-side state.",
-    detailedDescription: "Architected with responsive user interface principles, modern audio API integrations, and smooth transitions for music enthusiasts.",
+    category: "Full-Stack Web & E-Commerce",
+    tagline: "Gourmet Food Ordering & Delivery Platform with Three.js 3D Customizer",
+    description: "A production-grade, full-stack food ordering and delivery web platform built with Next.js 16 (App Router), TypeScript, Tailwind CSS, Prisma ORM, Cashfree Payments, and Brevo Transactional Emails.",
+    detailedDescription: "Architected for high-concurrency food delivery with Role-Based Access Control (Customer, Kitchen KDS Staff, Rider Dispatch, and Admin Analytics). Features a procedural Three.js 3D interactive roll customizer, Cashfree payment gateway + COD, 6-stage live fulfillment pipeline, and automated Brevo OTP verification & tracking emails. Built in collaboration with Renuka (@Renuka-wq).",
     featured: false,
     image: "/images/projects/rockinroll.svg",
-    technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Web Audio API"],
+    technologies: ["Next.js 16", "TypeScript", "Three.js", "Prisma ORM", "Cashfree Payments", "Brevo SMTP", "Tailwind CSS", "PWA"],
     githubUrl: "https://github.com/aarush0008x/rockinroll",
     liveUrl: "https://rockinroll.in",
-    role: "Full-Stack Developer",
+    role: "Lead Full-Stack Architect (Collab with Renuka)",
     highlights: [
-      "Fluid audio-reactive interface with responsive layouts",
-      "Fast client-side routing and optimized asset loading",
-      "Live production deployment on rockinroll.in"
+      "Procedural Three.js 3D gourmet roll with interactive rotation and custom lighting",
+      "Role-Based RBAC: Customer, Kitchen KDS Staff, Delivery Rider fleet, and Admin Analytics",
+      "6-stage live order fulfillment pipeline (Confirmed ➔ Preparing ➔ Ready ➔ Delivery ➔ Delivered)",
+      "Cashfree Payment Gateway + Cash on Delivery (COD) with webhook verification",
+      "Brevo transactional email dispatch for 6-digit OTP verification & live status updates"
     ],
     metrics: [
       { label: "Production Domain", value: "rockinroll.in" },
-      { label: "Live URL", value: "rockinroll.in" }
+      { label: "Architecture", value: "Next.js 16 + Prisma" },
+      { label: "Collab", value: "With Renuka (@Renuka-wq)" }
     ]
   },
   {

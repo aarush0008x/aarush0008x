@@ -51,10 +51,10 @@ aarush@cgc-lab:~$ neofetch --aarush
       🔗 <a href="https://nimocode.vercel.app/"><b>Live Web App</b></a> | 📁 <a href="https://github.com/aarush0008x/nimoCode"><b>Source Code</b></a>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">🎵 <a href="https://rockinroll.in">RockinRoll</a></h3>
+      <h3 align="left">🌯 <a href="https://rockinroll.in">RockinRoll</a></h3>
       <img src="https://img.shields.io/badge/Production-Live_Domain-2E7D32?style=flat-square" alt="Status" />
-      <p>Interactive modern audio & entertainment web experience with seamless playback controls, fluid audio visuals, and performant client state.</p>
-      <b>Tech:</b> <code>React</code> · <code>Next.js</code> · <code>Web Audio API</code> · <code>Tailwind CSS</code>
+      <p>Production-grade gourmet food ordering &amp; delivery platform with Three.js 3D roll customizer, RBAC (Customer/Kitchen/Rider/Admin), Cashfree payments, and Brevo transactional emails.</p>
+      <b>Tech:</b> <code>Next.js 16</code> · <code>Three.js</code> · <code>Prisma ORM</code> · <code>Cashfree</code> · <code>Brevo</code>
       <br /><br />
       🔗 <a href="https://rockinroll.in"><b>rockinroll.in</b></a> | 📁 <a href="https://github.com/aarush0008x/rockinroll"><b>Source Code</b></a>
     </td>

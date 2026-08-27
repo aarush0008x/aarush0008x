@@ -24,12 +24,12 @@ const ARCHITECTURE_FLOWS: Record<string, { steps: string[]; caption: string }> =
   },
   rockinroll: {
     steps: [
-      "Client Audio Player UI",
-      "Web Audio API & Spectrum Visualizer",
-      "Optimized State Manager",
-      "Low-Latency CDN Streaming (rockinroll.in)",
+      "Procedural Three.js 3D Roll Interactive Customizer",
+      "JWT Authentication & Role-Based RBAC (Customer / Kitchen / Rider / Admin)",
+      "Cashfree Payment Gateway Integration + Webhooks & COD",
+      "6-Stage Live Order Pipeline (Confirmed ➔ KDS Prep ➔ Rider Dispatch ➔ Delivered)",
     ],
-    caption: "Interactive real-time audio playback & visual spectrum pipeline",
+    caption: "Full-stack Next.js 16 + Prisma + Cashfree + Brevo food delivery architecture",
   },
   evidenceledger: {
     steps: [
