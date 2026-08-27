@@ -68,6 +68,9 @@ export async function POST(request: Request) {
 
         if (resAdmin.ok) {
           emailSentToAdmin = true;
+        } else {
+          const errText = await resAdmin.text();
+          console.error("Brevo Admin email failed:", resAdmin.status, errText);
         }
 
         // Mail 2: Confirmation Auto-Reply to the User (email) with a copy of their message
@@ -108,15 +111,20 @@ export async function POST(request: Request) {
 
         if (resUser.ok) {
           emailSentToUser = true;
+        } else {
+          const errText = await resUser.text();
+          console.error("Brevo User auto-reply failed:", resUser.status, errText);
         }
       } catch (brevoErr) {
         console.error("Brevo REST API error:", brevoErr);
       }
+    } else {
+      console.warn("BREVO_API_KEY is not set in environment variables.");
     }
 
     // 2. Try SMTP via Nodemailer if SMTP configuration is set
     const smtpPass = process.env.BREVO_SMTP_PASS || process.env.SMTP_PASS;
-    const smtpUser = process.env.BREVO_SMTP_USER || process.env.SMTP_USER || "nimocode@gmail.com";
+    const smtpUser = process.env.BREVO_SMTP_USER || process.env.SMTP_USER || "nimocodeai@gmail.com";
     const smtpHost = process.env.SMTP_HOST || "smtp-relay.brevo.com";
     const smtpPort = Number(process.env.SMTP_PORT) || 587;
 
