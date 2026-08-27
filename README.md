@@ -103,13 +103,13 @@ aarush@cgc-lab:~$ neofetch --aarush
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════════════╗
-║  ⚡ CypherVerse Hackathon (24-Hour Sprint)                                          ║
-║     Project: nimoCode — Public DNS routing & developer workspace subdomains       ║
+║  ⚡ CypherVerse Hackathon (24-Hour Sprint)                                         ║
+║     Project: nimoCode — Public DNS routing & developer workspace subdomains        ║
 ║     Stack  : React · TypeScript · Vite · Cloudflare Workers Monorepo               ║
 ╠════════════════════════════════════════════════════════════════════════════════════╣
-║  ⚡ HackNWin 3.0 Hackathon (24-Hour Sprint)                                         ║
+║  ⚡ HackNWin 3.0 Hackathon (24-Hour Sprint)                                        ║
 ║     Project: Arogya AI — AI-focused web application under continuous constraints   ║
-║     Stack  : React · Next.js · Applied AI · Vercel Edge                           ║
+║     Stack  : React · Next.js · Applied AI · Vercel Edge                            ║
 ╚════════════════════════════════════════════════════════════════════════════════════╝
 ```
 
