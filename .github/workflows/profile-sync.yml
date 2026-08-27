@@ -1,0 +1,35 @@
+name: Portfolio CI & Profile Sync
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Runs every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run TypeScript & Production Build
+        run: npm run build
+        env:
+          BREVO_SENDER_EMAIL: nimocodeai@gmail.com
+          NEXT_PUBLIC_SITE_URL: https://aarush0008x.vercel.app
+
+      - name: Verify Dynamic PDF Generation
+        run: node scripts/generate-resume-pdf.js

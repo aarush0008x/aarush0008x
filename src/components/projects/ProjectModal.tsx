@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, CheckCircle2, Layers, Cpu, Activity } from "lucide-react";
+import { X, ExternalLink, CheckCircle2, Cpu, ArrowRight } from "lucide-react";
 import { GithubIcon } from "@/components/common/Icons";
 import { Project } from "@/data/portfolioData";
 
@@ -10,6 +10,54 @@ interface ProjectModalProps {
   project: Project | null;
   onClose: () => void;
 }
+
+const ARCHITECTURE_FLOWS: Record<string, { steps: string[]; caption: string }> = {
+  nimocode: {
+    steps: [
+      "Subdomain Request (Vercel/Custom)",
+      "Cloudflare Workers Edge Proxy",
+      "Automated DNS Verification API",
+      "Instant Edge Routing (<2s Propagation)",
+    ],
+    caption: "Edge DNS proxying & instant public subdomain routing architecture",
+  },
+  rockinroll: {
+    steps: [
+      "Client Audio Player UI",
+      "Web Audio API & Spectrum Visualizer",
+      "Optimized State Manager",
+      "Low-Latency CDN Streaming (rockinroll.in)",
+    ],
+    caption: "Interactive real-time audio playback & visual spectrum pipeline",
+  },
+  evidenceledger: {
+    steps: [
+      "RAW Forensic Disk Image Ingestion",
+      "Signature-Based Binary File Carving",
+      "SHA-256 Hash-Chained Audit Ledger",
+      "NIST SP 800-88 Tamper Certificate (25/25 Tests)",
+    ],
+    caption: "Cryptographic tamper-evident chain & forensic verification pipeline",
+  },
+  bodhai: {
+    steps: [
+      "Terminal CLI & Cross-Platform UI",
+      "Intelligent Engine Dispatcher",
+      "Cloudflare Workers AI (Llama 3.1 8B) / Ollama",
+      "Real-Time Web Synthesis & Instant Share Links",
+    ],
+    caption: "Multi-surface edge routing & local AI fallback architecture",
+  },
+  smartdrobe: {
+    steps: [
+      "Closet Apparel Photo Ingestion",
+      "Computer Vision Feature Extraction",
+      "Color Harmony & Season Matrix",
+      "Weather-Aware Outfit Recommendation Engine",
+    ],
+    caption: "Computer vision wardrobe indexing & style generation pipeline",
+  },
+};
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   useEffect(() => {
@@ -29,6 +77,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   }, [project, onClose]);
 
   if (!project) return null;
+
+  const archFlow = ARCHITECTURE_FLOWS[project.id];
 
   return (
     <AnimatePresence>
@@ -79,7 +129,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <p>{project.detailedDescription}</p>
           </div>
 
-          {/* Key Metrics if available */}
+          {/* Key Metrics */}
           {project.metrics && project.metrics.length > 0 && (
             <div className="mb-8 grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 rounded-xl bg-[#1E1E1E] border border-[#F7F6F4]/10">
               {project.metrics.map((metric, idx) => (
@@ -92,6 +142,38 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* Architecture Deep-Dive Diagram Card */}
+          {archFlow && (
+            <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-[#1E1E1E] border border-[#802938]/30 shadow-inner">
+              <div className="flex items-center gap-2 mb-3">
+                <Cpu className="w-4 h-4 text-[#802938]" />
+                <h4 className="font-mono text-xs uppercase tracking-wider text-[#F7F6F4] font-semibold">
+                  System Architecture Flow
+                </h4>
+              </div>
+
+              <div className="space-y-2.5">
+                {archFlow.steps.map((step, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#802938]/20 text-[#802938] border border-[#802938]/40 text-xs font-mono font-bold shrink-0">
+                      0{idx + 1}
+                    </div>
+                    <div className="flex-1 p-2.5 rounded-lg bg-[#242424] border border-[#F7F6F4]/5 text-xs font-mono text-[#D6D2CB]">
+                      {step}
+                    </div>
+                    {idx < archFlow.steps.length - 1 && (
+                      <ArrowRight className="w-3.5 h-3.5 text-[#802938] shrink-0 hidden sm:block opacity-60" />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-3 text-[11px] font-mono text-[#9E9A93] italic">
+                ℹ️ {archFlow.caption}
+              </p>
             </div>
           )}
 
@@ -152,7 +234,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
 
             <span className="font-mono text-xs text-[#96928B]">
-              Author: @aarush0008
+              Author: @aarush0008x · CGC University
             </span>
           </div>
         </motion.div>

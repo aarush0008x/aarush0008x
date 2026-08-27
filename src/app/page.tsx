@@ -11,6 +11,7 @@ import { GithubActivitySection } from "@/components/github/GithubActivitySection
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { ContactSection } from "@/components/contact/ContactSection";
 import { Footer } from "@/components/common/Footer";
+import { AskAarushWidget } from "@/components/chat/AskAarushWidget";
 
 export default function Home() {
   return (
@@ -50,6 +51,9 @@ export default function Home() {
 
       {/* Editorial Footer */}
       <Footer />
+
+      {/* Floating Ask Aarush AI Assistant */}
+      <AskAarushWidget />
     </main>
   );
 }
