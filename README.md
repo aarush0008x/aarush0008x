@@ -10,8 +10,11 @@
 
   <p align="center">
     <a href="https://linkedin.com/in/aarush-singh-4b3a20358/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+    &nbsp;
     <a href="mailto:aarush0008x@gmail.com"><img src="https://img.shields.io/badge/Email-802938?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+    &nbsp;
     <a href="https://github.com/aarush0008x"><img src="https://img.shields.io/badge/GitHub-242424?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+    &nbsp;
     <a href="https://nimocode.vercel.app/"><img src="https://img.shields.io/badge/Live_Portfolio-802938?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
   </p>
 
@@ -19,7 +22,7 @@
 
 ---
 
-### ⚡ Terminal Summary
+### ⚡ Terminal Overview
 
 ```bash
 aarush@cgc-lab:~$ neofetch --aarush
@@ -27,7 +30,7 @@ aarush@cgc-lab:~$ neofetch --aarush
 
 ```yaml
   User        : Aarush Singh
-  Focus       : Artificial Intelligence, Machine Learning & Edge Computing
+  Focus       : Artificial Intelligence, Machine Learning & Edge Systems
   Institution : CGC University (B.Tech AI & DS)
   Languages   : Python, C++, C, Java, TypeScript, JavaScript, SQL, HTML/CSS
   Frameworks  : Next.js 16, React 19, FastAPI, Node.js, Tailwind CSS v4
@@ -130,17 +133,27 @@ aarush@cgc-lab:~$ neofetch --aarush
 
 ---
 
-## 📊 GitHub Analytics & Streak
+## 📊 Live GitHub Activity & Streak
 
 <div align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api?username=aarush0008x&show_icons=true&theme=tokyonight&hide_border=true&bg_color=242424&title_color=802938&icon_color=802938&text_color=F7F6F4" alt="Aarush's GitHub Stats" height="165" />
-  &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=aarush0008x&theme=tokyonight&hide_border=true&background=242424&ring=802938&fire=802938&currStreakLabel=802938&sideLabels=F7F6F4&dates=9E9A93" alt="GitHub Streak" height="165" />
+  <!-- Verified High-Uptime Streak Counter -->
+  <a href="https://github.com/aarush0008x">
+    <img src="https://streak-stats.demolab.com?user=aarush0008x&theme=tokyonight&background=242424&ring=802938&fire=802938&currStreakLabel=802938&sideLabels=F7F6F4&dates=9E9A93&hide_border=true" alt="GitHub Streak" width="480" />
+  </a>
 
   <br /><br />
 
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aarush0008x&layout=compact&theme=tokyonight&hide_border=true&bg_color=242424&title_color=802938&text_color=F7F6F4" alt="Top Languages" />
+  <!-- Metric Badges in Slate & Burgundy -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/Focus-AI_%26_Full--Stack_Systems-802938?style=for-the-badge" alt="Focus" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/University-CGC_Mohali-242424?style=for-the-badge" alt="University" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/Active_Repos-8%2B-802938?style=for-the-badge" alt="Repos" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/Hackathons-24hr_Sprints-242424?style=for-the-badge" alt="Hackathons" />
+  </p>
 
 </div>
 
