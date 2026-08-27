@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #2C2C2C;
+  --bg-darker: #1E1E1E;
+  --bg-surface: #242424;
+  --bg-surface-elevated: #282828;
+  --bg-surface-hover: #303030;
+
+  --accent-burgundy: #802938;
+  --accent-burgundy-hover: #9E3A4C;
+  --accent-burgundy-deep: #5E1A26;
+  --accent-burgundy-light: #B45264;
+  --accent-burgundy-tint: rgba(128, 41, 56, 0.16);
+  --accent-burgundy-border: rgba(158, 58, 76, 0.45);
+
+  --text-primary: #F7F6F4;
+  --text-secondary: #D6D2CB;
+  --text-muted: #9E9A93;
+  --text-subtle: #73706A;
+
+  --border-subtle: rgba(247, 246, 244, 0.1);
+  --border-medium: rgba(247, 246, 244, 0.18);
+  --border-focus: rgba(158, 58, 76, 0.6);
+}
+
+@theme {
+  --color-canvas: var(--bg-primary);
+  --color-canvas-dark: var(--bg-darker);
+  --color-surface: var(--bg-surface);
+  --color-surface-elevated: var(--bg-surface-elevated);
+  --color-surface-hover: var(--bg-surface-hover);
+
+  --color-burgundy: var(--accent-burgundy);
+  --color-burgundy-hover: var(--accent-burgundy-hover);
+  --color-burgundy-deep: var(--accent-burgundy-deep);
+  --color-burgundy-light: var(--accent-burgundy-light);
+  --color-burgundy-tint: var(--accent-burgundy-tint);
+  --color-burgundy-border: var(--accent-burgundy-border);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-medium: var(--border-medium);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #2C2C2C;
+  color: #F7F6F4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #2C2C2C;
+  color: #F7F6F4;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Editorial selection */
+::selection {
+  background-color: #802938;
+  color: #F7F6F4;
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A4744;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #802938;
+}
+
+/* Subtle grain overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Print styles for Resume */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .noise-overlay, header, nav, footer, button {
+    display: none !important;
+  }
+}
