@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, CheckCircle2, Cpu, ArrowRight } from "lucide-react";
 import { GithubIcon } from "@/components/common/Icons";
@@ -123,6 +124,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.tagline}
             </p>
           </div>
+
+          {/* High-Resolution Project Mockup Banner */}
+          {project.image && (
+            <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden bg-[#1E1E1E] border border-[#F7F6F4]/15 shadow-xl">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 75vw"
+              />
+            </div>
+          )}
 
           {/* Detailed Narrative */}
           <div className="space-y-4 mb-8 text-sm sm:text-base text-[#D6D2CB] leading-relaxed">

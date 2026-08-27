@@ -13,6 +13,7 @@ export interface Project {
   metrics?: { label: string; value: string }[];
   accentColor?: string;
   role: string;
+  image?: string;
 }
 
 export interface Hackathon {
@@ -62,6 +63,8 @@ export interface GithubStat {
   totalCommits: number;
   pullRequests: number;
   starsEarned: number;
+  longestStreak?: number;
+  currentStreak?: number;
   topLanguages: { name: string; percentage: number; color: string }[];
   pinnedRepos: {
     name: string;
@@ -74,28 +77,22 @@ export interface GithubStat {
 }
 
 export const PERSONAL_INFO = {
-  name: "Aarush",
-  surname: "Singh",
-  fullName: "Aarush Singh",
+  name: "Aarush Singh",
   title: "Developer · AI & Data Science Student · Builder",
   institution: "CGC University",
+  department: "Artificial Intelligence & Data Science",
   degree: "B.Tech in Artificial Intelligence & Data Science",
   location: "Mohali, Punjab, India",
   timezone: "Asia/Kolkata (IST)",
   status: "Available for Collaboration & Internships",
   bio: "I'm a B.Tech AI & Data Science student at CGC University who enjoys building projects, exploring technology, participating in hackathons, and turning ideas into real-world solutions.",
-  aboutDetailed: [
-    "I am currently pursuing my B.Tech in Artificial Intelligence and Data Science at CGC University. My work centers on the intersection of intelligent systems, scalable full-stack web engineering, and deliberate interface design.",
-    "Rather than treating technology as abstract code, I approach every challenge as an opportunity to build practical, real-world solutions that provide tangible value to users.",
-    "Hackathons and collaborative team environments have shaped how I build: with speed, clarity, and deep attention to structural integrity. I value thoughtful communication, clean code architecture, and continuous learning above everything else."
-  ],
   socials: {
     github: "https://github.com/aarush0008x",
     githubUsername: "aarush0008x",
     linkedin: "https://www.linkedin.com/in/aarush-singh-4b3a20358/",
     linkedinHandle: "aarush-singh-4b3a20358",
     email: "aarush0008x@gmail.com",
-    twitter: "https://twitter.com/aarush0008x"
+    portfolioUrl: "https://nimocode.vercel.app/"
   },
   meta: {
     yearsActive: "2023 — Present",
@@ -108,24 +105,25 @@ export const PERSONAL_INFO = {
 export const PROJECTS_DATA: Project[] = [
   {
     id: "nimocode",
-    title: "nimoCode Platform",
-    category: "Developer Tooling & Cloud Infrastructure",
-    tagline: "High-performance public subdomain provisioning & DNS routing platform",
-    description: "A developer infrastructure platform providing automated DNS record propagation, subdomain proxying, and edge routing over Cloudflare Workers.",
-    detailedDescription: "Built and contributed during the CypherVerse Hackathon and expanded into a full monorepo architecture. Manages DNS delegation, developer workspace subdomains, automated SSL termination, and low-latency proxying for web developers deploying custom portfolios and staging instances.",
+    title: "NimoCode AI",
+    category: "AI & Competitive Programming",
+    tagline: "AI-Powered Competitive Programming & FAANG Technical Interview Platform",
+    description: "An AI-powered competitive programming ecosystem featuring 2,000+ LeetCode problems, 1v1 duels, live contests, and automated complexity evaluation.",
+    detailedDescription: "Built and contributed during the CypherVerse Hackathon and expanded into a full-scale AI platform. Provides intelligent complexity analysis, live coding duel matchmaking, real-time code execution, and algorithmic performance benchmarks for competitive programmers.",
     featured: true,
+    image: "/images/projects/nimocode.png",
     technologies: ["TypeScript", "React", "Next.js", "Cloudflare Workers", "Vite", "Turborepo", "Tailwind CSS"],
     githubUrl: "https://github.com/aarush0008x/nimoCode",
     liveUrl: "https://nimocode.vercel.app/",
     role: "Lead Full-Stack & Edge Infrastructure Engineer",
     highlights: [
-      "Automated edge DNS routing using Cloudflare Workers and Vercel domains",
-      "Monorepo architecture with shared type libraries and edge workers",
-      "Sub-2-second instant subdomain reservation and real-time DNS status checks",
+      "AI-powered automated time and space complexity evaluation engine",
+      "2,000+ curated algorithmic problems with real-time duel matchmaking",
+      "Sub-2-second edge routing and instant live contest execution",
       "Built and deployed during CypherVerse Hackathon with modern React + TypeScript stack"
     ],
     metrics: [
-      { label: "Propagation Speed", value: "<2 seconds" },
+      { label: "Problems Library", value: "2,000+" },
       { label: "Live Platform", value: "nimocode.vercel.app" },
       { label: "Architecture", value: "Turborepo Monorepo" }
     ]
@@ -138,6 +136,7 @@ export const PROJECTS_DATA: Project[] = [
     description: "A dynamic full-stack media and entertainment web platform with seamless playback controls, interactive audio visuals, and performant client-side state.",
     detailedDescription: "Architected with responsive user interface principles, modern audio API integrations, and smooth transitions for music enthusiasts.",
     featured: false,
+    image: "/images/projects/rockinroll.svg",
     technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Web Audio API"],
     githubUrl: "https://github.com/aarush0008x/rockinroll",
     liveUrl: "https://rockinroll.in",
@@ -160,6 +159,7 @@ export const PROJECTS_DATA: Project[] = [
     description: "Enterprise digital forensics backend enforcing strict NIST SP 800-88 sanitization policies and cryptographic SHA-256 hash-chained audit logging.",
     detailedDescription: "Architected for forensic investigation laboratories. Integrates raw disk image ingestion, automated file signature carving algorithms (JPEG, PNG, PDF, ZIP), policy evaluation gates blocking unauthorized evidence destruction, and court-admissible PDF/HTML verification certificate generation.",
     featured: false,
+    image: "/images/projects/evidenceledger.svg",
     technologies: ["Python", "FastAPI", "SQLAlchemy", "MySQL", "Pytest", "Docker"],
     githubUrl: "https://github.com/aarush0008x/EvidenceLedger",
     liveUrl: "https://github.com/aarush0008x/EvidenceLedger",
@@ -183,6 +183,7 @@ export const PROJECTS_DATA: Project[] = [
     description: "An advanced multi-surface AI companion featuring terminal CLI, Cloudflare Workers AI edge routing, live web search synthesis, and instant worldwide public web share links.",
     detailedDescription: "BodhAI is built to deliver fast, deterministic AI interactions across Windows, macOS, Android (Termux/PWA), and iOS. It routes requests intelligently between Cloudflare edge models (Llama 3.1 8B) and local Ollama instances, features real-time search synthesis, automated session export to Excel spreadsheets, and single-binary zero-dependency distribution.",
     featured: false,
+    image: "/images/projects/bodhai.svg",
     technologies: ["Python", "TypeScript", "Cloudflare Workers", "FastAPI", "SQLite", "PWA"],
     githubUrl: "https://github.com/aarush0008x/BodhAI",
     liveUrl: "https://api.bodhai.aarushdevworld.workers.dev",
@@ -207,6 +208,7 @@ export const PROJECTS_DATA: Project[] = [
     description: "An AI-powered fashion assistant that catalogs apparel items via computer vision, classifies color aesthetics, and generates weather-aware outfit combinations.",
     detailedDescription: "Built with a responsive React frontend and intelligent recommendation heuristics. It categorizes apparel by fabric, season, and formal/casual context, reducing decision fatigue with personalized suggestions.",
     featured: false,
+    image: "/images/projects/smartdrobe.svg",
     technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Python"],
     githubUrl: "https://github.com/aarush0008x/smartdrobe",
     liveUrl: "https://smartdrobe-rho.vercel.app/",
